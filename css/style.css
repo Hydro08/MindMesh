@@ -116,6 +116,7 @@ body {
   background: rgb(208, 208, 174);
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
   position: fixed;
@@ -125,7 +126,13 @@ body {
   transition: right 0.5s ease;
 }
 
-.home-section .features-mobile-container ul {
+.mobile-features-wrapper {
+  width: 100%;
+  height: 60%;
+  border-bottom: solid 1px #000;
+}
+
+.home-section .mobile-features-wrapper ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -141,9 +148,31 @@ body {
   padding: 10px;
   cursor: pointer;
   transition: all 0.5s ease;
+  text-align: center;
 }
 
 .home-section .features-mobile-container ul li:hover {
+  background: teal;
+  color: #fff;
+}
+
+.mobile-auth-wrapper {
+  width: 100%;
+  height: 40%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.home-section .features-mobile-container button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
   background: teal;
   color: #fff;
 }
