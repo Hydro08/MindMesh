@@ -39,6 +39,7 @@ export function initLanding(elements) {
     burgerMenu.innerText = "☰";
     featuresMobileContainer.style.right = "-200px";
     mobileContainerOpen = false;
+    document.body.style.overflowY = "auto";
     allClickableBtn.forEach((homeBtn) => {
       homeBtn.style.pointerEvents = "auto";
     });
