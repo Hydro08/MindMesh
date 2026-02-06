@@ -228,6 +228,10 @@ body {
 
     gap: 20px;
   }
+
+  .features-mobile-container {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -301,5 +305,9 @@ body {
     align-items: center;
 
     gap: 20px;
+  }
+
+  .features-mobile-container {
+    display: none !important;
   }
 }

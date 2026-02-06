@@ -16,18 +16,20 @@ export function initLanding(elements) {
   });
 
   burgerMenu.addEventListener("click", (e) => {
-    if (!mobileContainerOpen) {
-      e.stopPropagation();
-      burgerMenu.innerText = "X";
-      featuresMobileContainer.style.right = "0";
-      mobileContainerOpen = true;
-      document.body.style.overflowY = "hidden";
-      allClickableBtn.forEach((homeBtn) => {
-        homeBtn.style.pointerEvents = "none";
-      });
-    } else {
-      e.stopPropagation();
-      closeMobileContainer();
+    if (window.innerWidth < 768) {
+      // only trigger for mobile
+      if (!mobileContainerOpen) {
+        e.stopPropagation();
+        burgerMenu.innerText = "X";
+        featuresMobileContainer.style.right = "0";
+        mobileContainerOpen = true;
+        document.body.style.overflowY = "hidden";
+        allClickableBtn.forEach((homeBtn) => {
+          homeBtn.style.pointerEvents = "none";
+        });
+      } else {
+        closeMobileContainer();
+      }
     }
   });
 
