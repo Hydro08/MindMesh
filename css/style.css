@@ -5,7 +5,7 @@
 }
 
 body {
-  background: orange;
+  background: beige;
 }
 
 .responsive-header {
@@ -60,8 +60,6 @@ body {
   width: 50%;
   height: 100vh;
 
-  background: blue;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,18 +95,19 @@ body {
   height: 30px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .home-section .right-container {
   width: 50%;
   height: 100vh;
-  background: yellow;
 }
 
 .home-section .features-mobile-container {
   width: 30%;
   height: 85vh;
-  background: red;
+
+  background: rgb(208, 208, 174);
 
   display: flex;
   justify-content: center;
