@@ -1,3 +1,3 @@
 git add .
-git commit -m "Auto Deploy: update sit"
+git commit -m "Auto Deploy: update site"
 git push origin main
