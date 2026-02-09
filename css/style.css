@@ -5,13 +5,23 @@
 }
 
 body {
-  background: beige;
+  background: linear-gradient(
+    120deg,
+    rgb(42, 9, 63),
+    rgb(129, 43, 160),
+    rgb(42, 9, 63)
+  );
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .responsive-header {
   width: 100%;
   height: 10vh;
-  background: teal;
+  background: none;
+  border-bottom: solid 1px #000;
 
   display: flex;
   justify-content: space-between;
@@ -190,7 +200,7 @@ body {
 .features-section {
   width: 100%;
   height: 100vh;
-  background: red;
+  scroll-margin-top: 10vh;
 }
 
 @media screen and (min-width: 768px) {
