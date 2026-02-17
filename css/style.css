@@ -12,7 +12,6 @@ html {
   width: 100%;
   height: 10vh;
   background: none;
-  border-bottom: solid 1px #000;
 
   display: flex;
   justify-content: space-between;
@@ -115,26 +114,28 @@ html {
   border-radius: 15px;
 }
 
-.home-section .features-mobile-container {
+.home-section .mobile-features-container {
   width: 100%;
   height: 40vh;
 
-  background: rgb(208, 208, 174);
+  background: #600075;
+  border-bottom: 2px solid #d000ff;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   position: fixed;
-  top: 10vh;
+  top: -40vh;
   left: 0;
+
   transition: top 0.5s ease;
 }
 
 .mobile-features-wrapper {
   width: 100%;
   height: 70%;
-  border-bottom: solid 1px #000;
+  border-bottom: solid 1px #d000ff;
 }
 
 .home-section .mobile-features-wrapper ul {
@@ -146,7 +147,7 @@ html {
   padding: 40px 0;
 }
 
-.home-section .features-mobile-container ul li {
+.home-section .mobile-features-container ul li {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   border-radius: 5px;
@@ -154,11 +155,6 @@ html {
   cursor: pointer;
   transition: all 0.5s ease;
   text-align: center;
-}
-
-.home-section .features-mobile-container ul li:hover {
-  background: teal;
-  color: #fff;
 }
 
 .mobile-auth-wrapper {
@@ -173,13 +169,13 @@ html {
   gap: 10px;
 }
 
-.home-section .features-mobile-container button {
+.mobile-auth-wrapper button {
   width: 100px;
   height: 30px;
   border: none;
   border-radius: 5px;
-  background: teal;
-  color: #fff;
+  border: 2px solid #d000ff;
+  cursor: pointer;
 }
 
 .features-section {
@@ -196,7 +192,6 @@ html {
   .responsive-header {
     width: 100%;
     height: 15vh;
-    background: teal;
 
     display: flex;
     justify-content: space-between;
@@ -240,20 +235,15 @@ html {
     gap: 20px;
   }
 
-  .features-mobile-container {
+  .mobile-features-container {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body {
-    background-color: beige;
-  }
-
-  .responsive-header {
+  body.dark-mode .responsive-header {
     width: 100%;
     height: 15vh;
-    background: teal;
 
     display: flex;
     justify-content: space-between;
@@ -318,7 +308,7 @@ html {
     gap: 20px;
   }
 
-  .features-mobile-container {
+  .mobile-features-container {
     display: none !important;
   }
 }

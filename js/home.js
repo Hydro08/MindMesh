@@ -12,6 +12,15 @@ export function initLanding(elements) {
 
   let mobileContainerOpen = false;
 
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    document.body.classList.remove("light-mode", "dark-mode"); // reset
+    document.body.classList.add(
+      savedTheme === "dark" ? "dark-mode" : "light-mode",
+    );
+  }
+
   getStartBtn.addEventListener("click", () => {
     alert("Hello");
   });
@@ -20,7 +29,7 @@ export function initLanding(elements) {
     if (!mobileContainerOpen) {
       e.stopPropagation();
       burgerMenu.innerText = "X";
-      featuresMobileContainer.style.right = "0";
+      featuresMobileContainer.style.top = "10vh";
       mobileContainerOpen = true;
       document.body.style.overflowY = "hidden";
       allClickableBtn.forEach((homeBtn) => {
@@ -31,14 +40,9 @@ export function initLanding(elements) {
     }
   });
 
-  homeSection.addEventListener("click", (e) => {
-    e.stopPropagation();
-    closeMobileContainer();
-  });
-
   function closeMobileContainer() {
     burgerMenu.innerText = "☰";
-    featuresMobileContainer.style.right = "-200px";
+    featuresMobileContainer.style.top = "-40vh";
     mobileContainerOpen = false;
     document.body.style.overflowY = "auto";
     allClickableBtn.forEach((homeBtn) => {
@@ -49,5 +53,13 @@ export function initLanding(elements) {
   themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+      themeToggle.innerText = "Light";
+    } else {
+      localStorage.setItem("theme", "light");
+      themeToggle.innerText = "Dark";
+    }
   });
 }
