@@ -4,6 +4,7 @@ export function initLanding(elements) {
     getStartBtn,
     demoBtn,
     featuresMobileContainer,
+    mobileHomeLink,
     themeToggle,
     mobileThemeToggle,
   } = elements;
@@ -14,11 +15,15 @@ export function initLanding(elements) {
 
   const savedTheme = localStorage.getItem("theme");
 
-  if (savedTheme) {
-    document.body.classList.remove("light-mode", "dark-mode"); // reset
-    document.body.classList.add(
-      savedTheme === "dark" ? "dark-mode" : "light-mode",
-    );
+  document.body.classList.remove("light-mode", "dark-mode");
+  document.body.classList.add(
+    savedTheme === "dark" ? "dark-mode" : "light-mode",
+  );
+
+  if (savedTheme === "dark") {
+    mobileThemeToggle.innerHTML = `<img src="icons/dark-mode.svg"> Dark`;
+  } else {
+    mobileThemeToggle.innerHTML = `<img src="icons/light-mode.svg"> Light`;
   }
 
   getStartBtn.addEventListener("click", () => {
@@ -28,7 +33,7 @@ export function initLanding(elements) {
   burgerMenu.addEventListener("click", (e) => {
     if (!mobileContainerOpen) {
       e.stopPropagation();
-      burgerMenu.innerText = "X";
+      burgerMenu.classList.toggle("open");
       featuresMobileContainer.style.top = "10vh";
       mobileContainerOpen = true;
       document.body.style.overflowY = "hidden";
@@ -40,9 +45,13 @@ export function initLanding(elements) {
     }
   });
 
+  mobileHomeLink.addEventListener("click", () => {
+    closeMobileContainer();
+  });
+
   function closeMobileContainer() {
-    burgerMenu.innerText = "☰";
-    featuresMobileContainer.style.top = "-40vh";
+    burgerMenu.classList.toggle("open");
+    featuresMobileContainer.style.top = "-55vh";
     mobileContainerOpen = false;
     document.body.style.overflowY = "auto";
     allClickableBtn.forEach((homeBtn) => {
@@ -65,9 +74,11 @@ export function initLanding(elements) {
     if (document.body.classList.contains("dark-mode")) {
       localStorage.setItem("theme", "dark");
       themeToggle.innerText = "Light";
+      mobileThemeToggle.innerHTML = `<img src="icons/dark-mode.svg" alt="Dark Mode"> Dark`;
     } else {
       localStorage.setItem("theme", "light");
       themeToggle.innerText = "Dark";
+      mobileThemeToggle.innerHTML = `<img src="icons/light-mode.svg" alt="Light Mode"> Light`;
     }
   }
 }

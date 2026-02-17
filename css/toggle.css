@@ -5,7 +5,7 @@ body.light-mode {
 
 body.light-mode .responsive-header {
   background: #f3e8ff;
-  border-bottom: solid 2px #cc00ff;
+  border-bottom: solid 2px #e987ff;
 }
 
 body.light-mode .logo-text {
@@ -18,7 +18,7 @@ body.light-mode .burger-menu {
   font-size: 24px;
   color: #000;
   padding: 9px 15px;
-  border: 2px solid #d000ff;
+  border: 2px solid #e987ff;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
@@ -26,12 +26,34 @@ body.light-mode .burger-menu {
 
 body.light-mode .home-section .mobile-features-container {
   background: #e1c5ff;
-  border-bottom: 2px solid #d000ff;
+  border-bottom: 2px solid #e987ff;
+}
+
+body.light-mode .mobile-features-container .mobile-features-wrapper {
+  border-bottom: solid 2px #e987ff;
 }
 
 body.light-mode .mobile-features-wrapper a {
   color: #000;
+  padding: 9px 15px;
+  background: #e1c5ff;
+  border: 2px solid #e987ff;
+  border-radius: 10px;
 }
+
+body.light-mode .mobile-toggle-wrapper {
+  border-bottom: 2px solid #e987ff;
+}
+
+body.light-mode .mobile-toggle-wrapper button {
+  background: #f3e8ff;
+}
+
+body.light-mode .mobile-auth-wrapper button {
+  background: #f3e8ff;
+}
+
+/* DARK MODE */
 
 body.dark-mode {
   background: #1a0027;
@@ -59,12 +81,25 @@ body.dark-mode .burger-menu {
   cursor: pointer;
 }
 
+body.dark-mode .mobile-features-container .mobile-features-wrapper {
+  border-bottom: 2px solid #d000ff;
+}
+
 body.dark-mode .mobile-features-wrapper a {
   color: #fff;
   padding: 9px 15px;
   background: #1a0027;
   border: 2px solid #d000ff;
   border-radius: 10px;
+}
+
+body.dark-mode .mobile-toggle-wrapper {
+  border-bottom: 2px solid #d000ff;
+}
+
+body.dark-mode .mobile-toggle-wrapper button {
+  color: #fff;
+  background: #1a0027;
 }
 
 body.dark-mode .mobile-auth-wrapper button {
