@@ -8,6 +8,7 @@ const elements = {
   featuresContainer: document.getElementById("featuresContainer"),
   featuresMobileContainer: document.getElementById("featuresMobileContainer"),
   themeToggle: document.getElementById("themeToggle"),
+  mobileThemeToggle: document.getElementById("mobileThemeToggle"),
 };
 
 document.addEventListener("DOMContentLoaded", () => {

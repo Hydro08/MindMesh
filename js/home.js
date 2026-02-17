@@ -1,11 +1,11 @@
 export function initLanding(elements) {
   const {
     burgerMenu,
-    homeSection,
     getStartBtn,
     demoBtn,
     featuresMobileContainer,
     themeToggle,
+    mobileThemeToggle,
   } = elements;
 
   let allClickableBtn = [getStartBtn, demoBtn];
@@ -51,6 +51,14 @@ export function initLanding(elements) {
   }
 
   themeToggle.addEventListener("click", () => {
+    themeFunc();
+  });
+
+  mobileThemeToggle.addEventListener("click", () => {
+    themeFunc();
+  });
+
+  function themeFunc() {
     document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
 
@@ -61,5 +69,5 @@ export function initLanding(elements) {
       localStorage.setItem("theme", "light");
       themeToggle.innerText = "Dark";
     }
-  });
+  }
 }

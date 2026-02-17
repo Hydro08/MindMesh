@@ -4,6 +4,7 @@ body.light-mode {
 }
 
 body.light-mode .responsive-header {
+  background: #f3e8ff;
   border-bottom: solid 2px #cc00ff;
 }
 
@@ -38,6 +39,7 @@ body.dark-mode {
 }
 
 body.dark-mode .responsive-header {
+  background: #1a0027;
   border-bottom: solid 2px #d000ff;
 }
 
