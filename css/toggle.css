@@ -1,0 +1,21 @@
+body.light-mode {
+  background: #f3e8ff;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .logo-container {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+body.dark-mode {
+  background: #1a0027;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .logo-container {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}

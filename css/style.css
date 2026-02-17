@@ -4,15 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: linear-gradient(
-    120deg,
-    rgb(42, 9, 63),
-    rgb(129, 43, 160),
-    rgb(42, 9, 63)
-  );
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -32,12 +23,6 @@ html {
   left: 0;
 
   padding: 0 18px;
-}
-
-.logo-container {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
 }
 
 .burger-menu {
@@ -131,8 +116,8 @@ html {
 }
 
 .home-section .features-mobile-container {
-  width: 30%;
-  height: 85vh;
+  width: 100%;
+  height: 40vh;
 
   background: rgb(208, 208, 174);
 
@@ -142,13 +127,13 @@ html {
 
   position: fixed;
   top: 10vh;
-  right: -200px;
-  transition: right 0.5s ease;
+  left: 0;
+  transition: top 0.5s ease;
 }
 
 .mobile-features-wrapper {
   width: 100%;
-  height: 60%;
+  height: 70%;
   border-bottom: solid 1px #000;
 }
 
@@ -157,7 +142,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   padding: 40px 0;
 }
 
@@ -178,7 +163,7 @@ html {
 
 .mobile-auth-wrapper {
   width: 100%;
-  height: 40%;
+  height: 30%;
 
   display: flex;
   flex-direction: column;

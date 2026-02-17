@@ -5,6 +5,7 @@ export function initLanding(elements) {
     getStartBtn,
     demoBtn,
     featuresMobileContainer,
+    themeToggle,
   } = elements;
 
   let allClickableBtn = [getStartBtn, demoBtn];
@@ -44,4 +45,9 @@ export function initLanding(elements) {
       homeBtn.style.pointerEvents = "auto";
     });
   }
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
+  });
 }

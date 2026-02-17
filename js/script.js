@@ -7,6 +7,11 @@ const elements = {
   demoBtn: document.getElementById("demoBtn"),
   featuresContainer: document.getElementById("featuresContainer"),
   featuresMobileContainer: document.getElementById("featuresMobileContainer"),
+  themeToggle: document.getElementById("themeToggle"),
 };
 
-initLanding(elements);
+document.addEventListener("DOMContentLoaded", () => {
+  if (elements.burgerMenu) {
+    initLanding(elements);
+  }
+});
