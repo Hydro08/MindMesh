@@ -33,7 +33,7 @@ export function initLanding(elements) {
   burgerMenu.addEventListener("click", (e) => {
     if (!mobileContainerOpen) {
       e.stopPropagation();
-      burgerMenu.classList.toggle("open");
+      burgerMenu.innerText = "X";
       featuresMobileContainer.style.top = "10vh";
       mobileContainerOpen = true;
       document.body.style.overflowY = "hidden";
@@ -50,7 +50,7 @@ export function initLanding(elements) {
   });
 
   function closeMobileContainer() {
-    burgerMenu.classList.toggle("open");
+    burgerMenu.innerText = "☰";
     featuresMobileContainer.style.top = "-55vh";
     mobileContainerOpen = false;
     document.body.style.overflowY = "auto";

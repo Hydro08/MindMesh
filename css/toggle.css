@@ -47,6 +47,7 @@ body.light-mode .mobile-toggle-wrapper {
 
 body.light-mode .mobile-toggle-wrapper button {
   background: #f3e8ff;
+  border: 2px solid #e987ff;
 }
 
 body.light-mode .mobile-auth-wrapper button {
@@ -100,6 +101,7 @@ body.dark-mode .mobile-toggle-wrapper {
 body.dark-mode .mobile-toggle-wrapper button {
   color: #fff;
   background: #1a0027;
+  border: 2px solid #d000ff;
 }
 
 body.dark-mode .mobile-auth-wrapper button {
