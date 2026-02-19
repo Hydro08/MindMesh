@@ -108,3 +108,17 @@ body.dark-mode .mobile-auth-wrapper button {
   color: #fff;
   background: #1a0027;
 }
+
+body.dark-mode .tagline-wrapper h1 {
+  color: #fff;
+}
+
+body.dark-mode .tagline-wrapper p {
+  color: #fff;
+}
+
+body.dark-mode .button-home-container button {
+  color: #fff;
+  background: #1a0027;
+  border: 2px solid #d000ff;
+}

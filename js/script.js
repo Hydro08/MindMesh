@@ -9,6 +9,7 @@ const elements = {
   featuresContainer: document.getElementById("featuresContainer"),
   featuresMobileContainer: document.getElementById("featuresMobileContainer"),
   mobileHomeLink: document.getElementById("mobileHomeLink"),
+  mobileFeaturesLink: document.getElementById("mobileFeaturesLink"),
   themeToggle: document.getElementById("themeToggle"),
   mobileThemeToggle: document.getElementById("mobileThemeToggle"),
   toggleSvg: document.getElementById("toggleSvg"),

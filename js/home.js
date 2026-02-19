@@ -4,6 +4,7 @@ export function initLanding(elements) {
     getStartBtn,
     demoBtn,
     featuresMobileContainer,
+    mobileFeaturesLink,
     mobileHomeLink,
     themeToggle,
     mobileThemeToggle,
@@ -46,6 +47,10 @@ export function initLanding(elements) {
   });
 
   mobileHomeLink.addEventListener("click", () => {
+    closeMobileContainer();
+  });
+
+  mobileFeaturesLink.addEventListener("click", () => {
     closeMobileContainer();
   });
 
