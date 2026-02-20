@@ -52,6 +52,53 @@
           <button id="mobileAuthSigninBtn">Sign Up</button>
         </div>
       </div>
+      <div class="mobile-auth-container">
+        <div class="mobile-login-wrapper" id="mobileLoginWrapper">
+          <h1>LOGIN</h1>
+          <form class="mobile-login-form" id="mobileLoginForm">
+            <div class="mobile-auth-name-group">
+              <label for="mobileLoginName">Name</label>
+              <input
+                type="text"
+                id="mobileLoginName"
+                placeholder="Input your name"
+                required
+              />
+            </div>
+            <div class="mobile-auth-pass-area">
+              <label for="mobileLoginPass">Password</label>
+              <input
+                type="password"
+                id="mobileLoginPass"
+                placeholder="Input your name"
+                required
+              />
+              <button>Sea</button>
+            </div>
+            <div class="mobile-auth-pass-checker">
+              <input type="checkbox" class="forgot-pass-checkbox" />
+              <p>Forgot Password</p>
+            </div>
+            <div class="mobile-login-submit">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="mobile-signup-wrapper" id="mobileSignupWrapper">
+          <h1>SIGN UP</h1>
+          <form id="mobileSignupForm">
+            <label for="mobileSignupName">Name</label>
+            <input
+              type="text"
+              id="mobileSignupName"
+              placeholder="Input your name"
+              required
+            />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="mobile-forgot-pass-wrapper"></div>
+      </div>
       <div class="home-wrapper">
         <div class="tagline-wrapper">
           <h1>Learn It. Keep It.</h1>
@@ -70,5 +117,7 @@
     <section class="how-it-works-section" id="howItWorksSection">Test</section>
     <section class="demo-section" id="demoSection">Test</section>
     <script type="module" src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
   </body>
 </html>

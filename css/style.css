@@ -20,7 +20,7 @@ html {
   top: 0;
   left: 0;
 
-  z-index: 1;
+  z-index: 5;
 
   padding: 0 18px;
 }
@@ -222,6 +222,114 @@ html {
   border-radius: 5px;
   border: 2px solid #d000ff;
   cursor: pointer;
+}
+
+.home-section .mobile-auth-container {
+  width: 100%;
+  height: 50vh;
+
+  display: flex;
+
+  position: absolute;
+  top: 15vh;
+  left: 0;
+
+  border-top: 2px solid #d000ff;
+  border-bottom: 2px solid #d000ff;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+.mobile-auth-container .mobile-login-wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* overflow: hidden; */
+}
+
+.mobile-login-wrapper .mobile-login-form {
+  width: 100%;
+  height: 100%;
+
+  background: orange;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-login-form .mobile-auth-name-group {
+  height: 30%;
+  width: 100%;
+  background: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 18px;
+  gap: 10px;
+}
+
+.mobile-login-form .mobile-auth-pass-area {
+  height: 30%;
+  width: 100%;
+  background: blue;
+  display: flex;
+  flex-grow: 1;
+  padding: 10px 18px;
+  gap: 10px;
+}
+
+.mobile-login-form .mobile-auth-pass-checker {
+  height: 10%;
+  width: 100%;
+  background: yellow;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 10px;
+}
+
+.mobile-auth-name-group label {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.mobile-auth-pass-area label {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.mobile-auth-name-group input,
+.mobile-auth-pass-area input {
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+.mobile-auth-container .mobile-signup-wrapper {
+  width: 0%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
 }
 
 .features-section {

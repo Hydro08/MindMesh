@@ -54,6 +54,11 @@ body.light-mode .mobile-auth-wrapper button {
   background: #f3e8ff;
 }
 
+body.light-mode .mobile-auth-container {
+  background: #f3e8ff;
+  border-bottom: 2px solid #e987ff;
+}
+
 /* DARK MODE */
 
 body.dark-mode {
