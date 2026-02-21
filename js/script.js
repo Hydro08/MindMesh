@@ -14,9 +14,15 @@ const elements = {
   mobileThemeToggle: document.getElementById("mobileThemeToggle"),
   toggleSvg: document.getElementById("toggleSvg"),
   mobileAuthLoginBtn: document.getElementById("mobileAuthLoginBtn"),
+  mobileAuthSigninBtn: document.getElementById("mobileAuthSigninBtn"),
   authContainer: document.getElementById("authContainer"),
   loginWrapper: document.getElementById("loginWrapper"),
+  signupWrapper: document.getElementById("signupWrapper"),
+  toLogin: document.getElementById("toLogin"),
   toSignup: document.getElementById("toSignup"),
+  authLoginBtn: document.getElementById("authLoginBtn"),
+  authSignupBtn: document.getElementById("authSignupBtn"),
+  togglePass: document.querySelectorAll(".toggle-password"),
 };
 
 document.addEventListener("DOMContentLoaded", () => {

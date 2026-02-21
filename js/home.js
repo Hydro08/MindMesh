@@ -9,15 +9,35 @@ export function initLanding(elements) {
     themeToggle,
     mobileThemeToggle,
     mobileAuthLoginBtn,
+    mobileAuthSigninBtn,
     authContainer,
     loginWrapper,
+    signupWrapper,
+    toLogin,
     toSignup,
+    togglePass,
   } = elements;
 
   let allClickableBtn = [getStartBtn, demoBtn];
 
   let mobileContainerOpen = false;
   let authContainerOpen = false;
+  let authMode = null;
+
+  togglePass.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const fieldControl = btn.closest(".field-control");
+      const input = fieldControl.querySelector("input");
+
+      if (input.type === "password") {
+        input.type = "text";
+        btn.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
+      } else {
+        input.type = "password";
+        btn.innerHTML = `<i class="fa-solid fa-eye"></i>`;
+      }
+    });
+  });
 
   const savedTheme = localStorage.getItem("theme");
 
@@ -62,18 +82,17 @@ export function initLanding(elements) {
   function closeMobileContainer() {
     if (authContainerOpen) {
       burgerMenu.innerText = "X";
+      authContainerOpen = false;
       featuresMobileContainer.style.top = "-55vh";
       document.body.style.overflowY = "auto";
-      authContainerOpen = false;
       allClickableBtn.forEach((homeBtn) => {
         homeBtn.style.pointerEvents = "none";
       });
     } else {
       burgerMenu.innerText = "☰";
       featuresMobileContainer.style.top = "-55vh";
-      authClose();
       mobileContainerOpen = false;
-      authContainerOpen = false;
+
       document.body.style.overflowY = "auto";
       allClickableBtn.forEach((homeBtn) => {
         homeBtn.style.pointerEvents = "auto";
@@ -92,6 +111,7 @@ export function initLanding(elements) {
 
   mobileAuthLoginBtn.addEventListener("click", () => {
     if (!authContainerOpen) {
+      authMode = "login";
       authContainerOpen = true;
       authOpen();
       closeMobileContainer();
@@ -99,7 +119,26 @@ export function initLanding(elements) {
     }
   });
 
-  toSignup.addEventListener("click", () => {});
+  mobileAuthSigninBtn.addEventListener("click", () => {
+    if (!authContainerOpen) {
+      authMode = "signup";
+      authContainerOpen = true;
+      authOpen();
+      closeMobileContainer();
+      return;
+    }
+  });
+
+  toLogin.addEventListener("click", () => {
+    signupWrapper.style.width = "0%";
+    loginWrapper.style.width = "100%";
+  });
+
+  toSignup.addEventListener("click", () => {
+    signupWrapper.style.width = "100%";
+
+    loginWrapper.style.width = "0%";
+  });
 
   function themeFunc() {
     document.body.classList.toggle("dark-mode");
@@ -118,14 +157,19 @@ export function initLanding(elements) {
 
   function authOpen() {
     authContainer.style.display = "flex";
-    if (mobileAuthLoginBtn) {
+    if (authMode === "login") {
       loginWrapper.style.width = "100%";
-    } else {
+      signupWrapper.style.width = "0%";
+    } else if (authMode === "signup") {
+      signupWrapper.style.width = "100%";
+      loginWrapper.style.width = "0%";
       console.log("Test");
     }
   }
 
   function authClose() {
     authContainer.style.display = "none";
+    authMode = null;
+    authContainerOpen = false;
   }
 }

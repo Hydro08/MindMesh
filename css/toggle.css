@@ -179,7 +179,8 @@ body.dark-mode .auth-link {
   color: #fff;
 }
 
-body.dark-mode .fa-eye {
+body.dark-mode .fa-eye,
+body.dark-mode .fa-eye-slash {
   color: #fff;
 }
 
