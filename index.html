@@ -14,7 +14,7 @@
   </head>
   <body class="light-mode">
     <header class="responsive-header">
-      <h1 class="logo-text">MindMesh</h1>
+      <h1 class="logo-text">Review Hub</h1>
       <div class="burger-menu" id="burgerMenu">☰</div>
       <div class="features-container" id="featuresContainer">
         <ul>
@@ -52,52 +52,69 @@
           <button id="mobileAuthSigninBtn">Sign Up</button>
         </div>
       </div>
-      <div class="mobile-auth-container">
-        <div class="mobile-login-wrapper" id="mobileLoginWrapper">
-          <h1>LOGIN</h1>
-          <form class="mobile-login-form" id="mobileLoginForm">
-            <div class="mobile-auth-name-group">
-              <label for="mobileLoginName">Name</label>
+      <div class="auth-container" id="authContainer">
+        <div class="auth-panel login-panel" id="loginWrapper">
+          <h1 class="auth-title">LOGIN</h1>
+
+          <form class="auth-form" id="loginForm">
+            <div class="form-group">
+              <label for="loginName">Name</label>
               <input
                 type="text"
-                id="mobileLoginName"
+                id="loginName"
                 placeholder="Input your name"
                 required
               />
             </div>
-            <div class="mobile-auth-pass-area">
-              <label for="mobileLoginPass">Password</label>
+
+            <div class="form-group password-field">
+              <div class="field-label">
+                <label for="loginPass">Password</label>
+              </div>
+
+              <div class="field-control">
+                <input
+                  type="password"
+                  id="loginPass"
+                  placeholder="Input your password"
+                  required
+                />
+                <button type="button" class="toggle-password">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="auth-helper">
+              <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+
+            <div class="auth-actions">
+              <p class="auth-link" id="toSignup">Don't have an account?</p>
+              <button type="submit" class="btn btn-primary">LOGIN</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="auth-panel signup-panel" id="signupWrapper">
+          <h1 class="auth-title">SIGN UP</h1>
+
+          <form class="auth-form" id="signupForm">
+            <div class="form-group">
+              <label for="signupName">Name</label>
               <input
-                type="password"
-                id="mobileLoginPass"
+                type="text"
+                id="signupName"
                 placeholder="Input your name"
                 required
               />
-              <button>Sea</button>
             </div>
-            <div class="mobile-auth-pass-checker">
-              <input type="checkbox" class="forgot-pass-checkbox" />
-              <p>Forgot Password</p>
-            </div>
-            <div class="mobile-login-submit">
-              <button type="submit">Submit</button>
-            </div>
+
+            <button type="submit" class="btn btn-primary">SIGN UP</button>
           </form>
         </div>
-        <div class="mobile-signup-wrapper" id="mobileSignupWrapper">
-          <h1>SIGN UP</h1>
-          <form id="mobileSignupForm">
-            <label for="mobileSignupName">Name</label>
-            <input
-              type="text"
-              id="mobileSignupName"
-              placeholder="Input your name"
-              required
-            />
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-        <div class="mobile-forgot-pass-wrapper"></div>
+
+        <div class="auth-panel forgot-panel" id="forgotWrapper"></div>
       </div>
       <div class="home-wrapper">
         <div class="tagline-wrapper">

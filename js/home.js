@@ -8,11 +8,16 @@ export function initLanding(elements) {
     mobileHomeLink,
     themeToggle,
     mobileThemeToggle,
+    mobileAuthLoginBtn,
+    authContainer,
+    loginWrapper,
+    toSignup,
   } = elements;
 
   let allClickableBtn = [getStartBtn, demoBtn];
 
   let mobileContainerOpen = false;
+  let authContainerOpen = false;
 
   const savedTheme = localStorage.getItem("theme");
 
@@ -55,13 +60,26 @@ export function initLanding(elements) {
   });
 
   function closeMobileContainer() {
-    burgerMenu.innerText = "☰";
-    featuresMobileContainer.style.top = "-55vh";
-    mobileContainerOpen = false;
-    document.body.style.overflowY = "auto";
-    allClickableBtn.forEach((homeBtn) => {
-      homeBtn.style.pointerEvents = "auto";
-    });
+    if (authContainerOpen) {
+      burgerMenu.innerText = "X";
+      featuresMobileContainer.style.top = "-55vh";
+      document.body.style.overflowY = "auto";
+      authContainerOpen = false;
+      allClickableBtn.forEach((homeBtn) => {
+        homeBtn.style.pointerEvents = "none";
+      });
+    } else {
+      burgerMenu.innerText = "☰";
+      featuresMobileContainer.style.top = "-55vh";
+      authClose();
+      mobileContainerOpen = false;
+      authContainerOpen = false;
+      document.body.style.overflowY = "auto";
+      allClickableBtn.forEach((homeBtn) => {
+        homeBtn.style.pointerEvents = "auto";
+      });
+      authClose();
+    }
   }
 
   themeToggle.addEventListener("click", () => {
@@ -71,6 +89,17 @@ export function initLanding(elements) {
   mobileThemeToggle.addEventListener("click", () => {
     themeFunc();
   });
+
+  mobileAuthLoginBtn.addEventListener("click", () => {
+    if (!authContainerOpen) {
+      authContainerOpen = true;
+      authOpen();
+      closeMobileContainer();
+      return;
+    }
+  });
+
+  toSignup.addEventListener("click", () => {});
 
   function themeFunc() {
     document.body.classList.toggle("dark-mode");
@@ -85,5 +114,18 @@ export function initLanding(elements) {
       themeToggle.innerText = "Dark";
       mobileThemeToggle.innerHTML = `<img src="icons/light-mode.svg" alt="Light Mode"> Light`;
     }
+  }
+
+  function authOpen() {
+    authContainer.style.display = "flex";
+    if (mobileAuthLoginBtn) {
+      loginWrapper.style.width = "100%";
+    } else {
+      console.log("Test");
+    }
+  }
+
+  function authClose() {
+    authContainer.style.display = "none";
   }
 }

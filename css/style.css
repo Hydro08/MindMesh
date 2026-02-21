@@ -29,7 +29,6 @@ html {
   width: 50px;
   height: 50px;
   font-size: 24px;
-  color: #fff;
   font-weight: bold;
   cursor: pointer;
 
@@ -224,25 +223,22 @@ html {
   cursor: pointer;
 }
 
-.home-section .mobile-auth-container {
+.home-section .auth-container {
   width: 100%;
   height: 50vh;
 
-  display: flex;
+  display: none;
 
   position: absolute;
   top: 15vh;
   left: 0;
-
-  border-top: 2px solid #d000ff;
-  border-bottom: 2px solid #d000ff;
 
   overflow: hidden;
 
   z-index: 1;
 }
 
-.mobile-auth-container .mobile-login-wrapper {
+.auth-container .login-panel {
   width: 100%;
   height: 100%;
 
@@ -254,22 +250,20 @@ html {
   /* overflow: hidden; */
 }
 
-.mobile-login-wrapper .mobile-login-form {
+.login-panel .auth-form {
   width: 100%;
   height: 100%;
 
-  background: orange;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.mobile-login-form .mobile-auth-name-group {
+.auth-form .form-group {
   height: 30%;
   width: 100%;
-  background: blue;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -277,41 +271,41 @@ html {
   gap: 10px;
 }
 
-.mobile-login-form .mobile-auth-pass-area {
+.auth-form .password-field {
   height: 30%;
   width: 100%;
-  background: blue;
+
   display: flex;
-  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px 18px;
   gap: 10px;
 }
 
-.mobile-login-form .mobile-auth-pass-checker {
-  height: 10%;
-  width: 100%;
-  background: yellow;
+.password-field .field-control {
   display: flex;
   justify-content: left;
   align-items: center;
-  padding: 10px 18px;
-  gap: 10px;
+  gap: 5px;
 }
 
-.mobile-auth-name-group label {
+.field-control .toggle-password {
+  width: 40px;
+  height: 40px;
+
+  /* border */
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.auth-form label {
   font-size: 24px;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
 }
 
-.mobile-auth-pass-area label {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.mobile-auth-name-group input,
-.mobile-auth-pass-area input {
+.auth-form input {
   width: 80%;
   height: 40px;
   border-radius: 10px;
@@ -320,7 +314,48 @@ html {
   font-weight: bold;
 }
 
-.mobile-auth-container .mobile-signup-wrapper {
+.auth-form .auth-helper {
+  height: 10%;
+  width: 100%;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 10px;
+}
+
+.auth-form .auth-actions {
+  width: 100%;
+  height: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.auth-actions .auth-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.auth-actions button {
+  width: 140px;
+  height: 40px;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+}
+
+.auth-container .signup-panel {
   width: 0%;
   height: 100%;
 

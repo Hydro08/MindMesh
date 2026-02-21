@@ -13,6 +13,10 @@ const elements = {
   themeToggle: document.getElementById("themeToggle"),
   mobileThemeToggle: document.getElementById("mobileThemeToggle"),
   toggleSvg: document.getElementById("toggleSvg"),
+  mobileAuthLoginBtn: document.getElementById("mobileAuthLoginBtn"),
+  authContainer: document.getElementById("authContainer"),
+  loginWrapper: document.getElementById("loginWrapper"),
+  toSignup: document.getElementById("toSignup"),
 };
 
 document.addEventListener("DOMContentLoaded", () => {
